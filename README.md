@@ -42,6 +42,7 @@ $ eval "$(ssh-agent -s)"
 ### 3. Additional dependencies
 
 - Install node via Homebrew: `brew install node`.
+- Install nvm via Homebrew: `brew install nvm`.
 
 ### 4. Customize things
 - Disable LCD font smoothing
