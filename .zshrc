@@ -2,9 +2,6 @@
 # Work Setup
 # ------
 alias chrome='open /Applications/Google\ Chrome.app --args --ignore-certificate-errors'
-# export WORKON_HOME=$HOME/.virtualenvs
-# export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-# source /usr/local/bin/virtualenvwrapper.sh
 export PATH="/usr/local/mysql/bin:$PATH"
 export QUEUE_PREFIX=mikhailabordo
 export PATH="$PATH:$HOME/.composer/vendor/bin"
@@ -18,20 +15,6 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 export WORKSPACE_DIR=/Users/mikhailabordo/workspace
-
-
-# Custom bash prompt
-#
-# Includes custom character for the prompt, path, and Git branch name.
-#
-# Source: kirsle.net/wizards/ps1.html
-export PS1="\n\[$(tput bold)\]" # set to bold
-PS1="$PS1\[\033[1;96m\]" #high intencity cyan
-PS1="$PS1\w" #working directory
-PS1="$PS1\[\033[1;95m\]" #high intensity purple
-PS1="$PS1\$(current_git_branch)" #display git branch
-PS1="$PS1\n\[$(tput setaf 5)\]❯ \[$(tput sgr0)\]" #editor to new line
-
 
 # Aliases
 
@@ -69,10 +52,7 @@ alias ssh-list="cat ~/.ssh/config"
 # ------
 # Folder directory
 # ------
-alias cdai='cd ~/workspace'
-alias startai='cd ~/Documents/ai-dev-tools/ansible-plays && make start'
-alias aicomp='vi ~/Documents/ai-dev-tools/ansible-plays/.components_override.yaml'
-alias cdhn='cd ~/hackernoon'
+alias cdwork='cd ~/workspace'
 
 # ------
 # Kubernetes

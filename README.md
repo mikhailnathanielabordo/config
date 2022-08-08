@@ -21,47 +21,38 @@ Many of the included macOS Terminal customizations are taken from <https://githu
 
 ## Checklist
 
-### 1. Prep OS X
+### 1. Prep iTerm.app
 
-- Download and install latest version of Xcode from the Mac App Store.
-- Open Terminal and trigger Xcode Command Line Tools installation: `xcode-select --install`
-
-**Be sure to open Xcode and agree to the terms of use.**
-
-### 2. Prep Terminal.app
-
-- Load [`.bash_profile`](/.bash_profile)
+- Load [`.zshrc`](/.zshrc)
 - Load [`.gitconfig`](/.gitconfig) contents into the global `~/.gitconfig`
-- Load up the Atom theme from <https://github.com/nathanbuchar/atom-one-dark-terminal>
 
-### 3. Secure Git(Hub) access
+### 2. Secure Git(Hub) access
 
 - [Generate an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for Terminal to auth your GitHub account when 2FA is enabled.
+```
+# Generate Access Token
+$ ssh-keygen -t ed25519 -C "mikhailnathanielabordo@gmail.com"
+$ ssh-add -K ~/.ssh/id_ed25519
+$ ssh-add -l -E sha256
 
-### 4. GitHub dev setup
+# To Check if you have access
+$ eval "$(ssh-agent -s)"
+```
 
-- Download the Strap setup script for GitHub's foundational development setup.
-- Clone the `github/github` repository and run `script/bootstrap`.
-
-### 5. Setup Ruby
-
-- Install rbenv via Homebrew: `brew install rbenv`.
-- Download a version of Ruby via rbenv (e.g., `rbenv install 2.5.1`). See <https://gorails.com/setup/osx/10.11-el-capitan>.
-- Make it the global version of Ruby: `rbenv global 2.5.1`.
-
-*Installing and managing Ruby with rbenv allows us to specify versions of Ruby on a per-project basis. It also means we can avoid running sudo commands for installing gems and more as it's not affecting OS X's system Ruby.*
-
-*Having trouble with nokogiri? See <https://stackoverflow.com/a/41491487>.*
-
-### 6. Additional dependencies
+### 3. Additional dependencies
 
 - Install node via Homebrew: `brew install node`.
-- Install Sass, Jekyll, and Rouge: `gem install bundler sass jekyll rouge`.
 
-### 7. Customize things
+### 4. Customize things
 - Disable LCD font smoothing
+- Change Time Format `System Preference` > `Dock & Menu Bar` > `Clock` > `Time Options` > `Digital`
 - Hide desktop icons with `defaults write com.apple.finder CreateDesktop false; killall Finder`
 - Set sidebar icons to Small
+- Adjust iTerm Shortcut Keys
+  - Go to Preferences... > Profiles > Keys (not Preferences... > Keys)
+  - On current versions (3.14+) you then switch to the Key Mappings tab
+  - Press Presets... dropdown button.
+  - Select Natural Text Editing
 
 ## Use it yourself
 
