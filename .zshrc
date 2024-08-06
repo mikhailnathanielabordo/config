@@ -3,18 +3,24 @@
 # ------
 alias chrome='open /Applications/Google\ Chrome.app --args --ignore-certificate-errors'
 export PATH="/usr/local/mysql/bin:$PATH"
-export QUEUE_PREFIX=mikhailabordo
+export QUEUE_PREFIX=mikhailnathanielperezabordo # Change to local path
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 # Python env manager settings
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-export PATH=$PATH:/Users/mikhailabordo/.local/bin
+export PATH=$PATH:/Users/mikhailnathanielperezabordo/.local/bin
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-export WORKSPACE_DIR=/Users/mikhailabordo/workspace
+export WORKSPACE_DIR=/Users/mikhailnathanielperezabordo/workspace
+export GITHUB_TOKEN="Add Github Token Here"
+
+# Add AWS Config here for TIAI
+export AWS_ACCESS_KEY_ID="###################"
+export AWS_SECRET_ACCESS_KEY="###################"
+export AWS_SESSION_TOKEN="###################"
 
 # Aliases
 
@@ -33,11 +39,15 @@ alias pull='echo "Pulling..." && git pull origin $(git branch | sed -n -e "s/^\*
 alias fp='fetch && pull'
 alias gmm='echo "Merge from master." && git merge master'
 alias com='co master'
+alias com='co develop'
 alias brd='br -D'
 alias gc='git commit'
 alias gcm='gc -m'
 alias grl='git remote -v'
 alias ga='git add'
+alias gra='git remote add'
+alias grp='git cherry-pick -n'
+alias rev='git reset HEAD~'
 
 # -------
 # Shortcuts
@@ -52,7 +62,7 @@ alias ssh-list="cat ~/.ssh/config"
 # ------
 # Folder directory
 # ------
-alias cdwork='cd ~/workspace'
+alias cdai='cd ~/workspace'
 
 # ------
 # Kubernetes
