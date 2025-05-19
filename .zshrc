@@ -15,13 +15,12 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 export WORKSPACE_DIR=/Users/mikhailnathanielperezabordo/workspace
-export GITHUB_TOKEN="Add Github Token Here"
+export GITHUB_TOKEN=""
 
 # Add AWS Config here for TIAI
-export AWS_ACCESS_KEY_ID="###################"
-export AWS_SECRET_ACCESS_KEY="###################"
-export AWS_SESSION_TOKEN="###################"
-
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_SESSION_TOKEN=""
 # Aliases
 
 # ------
